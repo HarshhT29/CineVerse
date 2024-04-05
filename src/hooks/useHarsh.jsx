@@ -14,7 +14,7 @@ const useHarsh = (url) => {
         fetchDataFromApi(url)
             .then((res)=> {
                 setLoading(false);
-                setData(false);
+                setData(res);
             })
             .catch((err) => {
                 setLoading(false);

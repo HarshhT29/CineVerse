@@ -1,14 +1,19 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import { useNavigate } from 'react-router-dom';
-import useHarsh from '../../../hooks/useHarsh';
 import "./style.css"
+import useHarsh from '../../../hooks/useHarsh';
 
 const HeroBanner = () => {
   const [bg,setBg] = useState("");
   const [inp,setInp] = useState("");
   const navigate = useNavigate();
 
-  const {data,loading} = useHarsh("/movie/upcoming");
+  const {data,loading,err} = useHarsh("/movie/upcoming");
+
+  useEffect(()=>{
+    const bgImage = data?.results?.[Math.floor(Math.random()*20)]?.backdrop_path;
+    setBg(bgImage);
+  }, [data])
 
   const inpHandler = (e) => {
     if(e.key==="Enter" && inp.length>0)
