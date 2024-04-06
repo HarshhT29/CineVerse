@@ -17,15 +17,20 @@ function App() {
   const { url } = useSelector((state) => state.home);
 
   useEffect(() => {
-    apiTesting();
+    getApiConfig();
   }, []);
 
-  const apiTesting = () => {
+  const getApiConfig = () => {
     // Get data from the API
-    fetchDataFromApi('/movie/popular')
+    fetchDataFromApi("/configuration")
       .then((res) => {
         console.log(res);
-        dispatch(getApiConfiguration(res));
+        const url = {
+          backdrop: res.images.secure_base_url + "original",
+          poster: res.images.secure_base_url + "original",
+          profile: res.images.secure_base_url + "original",
+        }
+        dispatch(getApiConfiguration(url));
       });
   }
 
@@ -33,11 +38,11 @@ function App() {
     <BrowserRouter>
       {/* <Header /> */}
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/:mediaType/:id" element={<Details/>} />
-        <Route path="/search/:query" element={<SearchResult/>} />
-        <Route path="/explore/:mediaType" element={<Explore/>} />
-        <Route path="*" element={<PageNotFound/>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/:mediaType/:id" element={<Details />} />
+        <Route path="/search/:query" element={<SearchResult />} />
+        <Route path="/explore/:mediaType" element={<Explore />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
       {/* <Footer /> */}
     </BrowserRouter>
