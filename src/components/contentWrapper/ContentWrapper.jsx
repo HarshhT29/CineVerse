@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ContentWrapper = ({children}) => {
+const ContentWrapper = ({children ,className}) => {
     const contentWrapper = {
         width: "100%",
         maxWidth: "1200px",
@@ -8,7 +8,7 @@ const ContentWrapper = ({children}) => {
         padding: "0 20px",
     }
   return (
-    <div style={contentWrapper}>
+    <div className={className} style={contentWrapper}>
       { children }
     </div>
   );

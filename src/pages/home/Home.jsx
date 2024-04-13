@@ -6,6 +6,7 @@ const Home = () => {
   return (
     <div className='homePage'>
       <HeroBanner />
+      {/* <div className="h-[1000px]"></div> */}
     </div>
   )
 }

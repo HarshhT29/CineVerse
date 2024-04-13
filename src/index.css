@@ -66,3 +66,11 @@ body {
       }
   }
 }
+/* @keyframes mobileMenuView {
+  0% {
+      transform: translateY(-130%);
+  }
+  100% {
+      transform: translateY(0);
+  }
+} */
