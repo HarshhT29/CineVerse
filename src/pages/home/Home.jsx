@@ -1,12 +1,13 @@
 import React from 'react'
 import "./style.css"
 import HeroBanner from './heroBanner/HeroBanner'
-HeroBanner
+import Trending from './Trending'
 const Home = () => {
   return (
     <div className='homePage'>
       <HeroBanner />
-      {/* <div className="h-[1000px]"></div> */}
+      <Trending />
+      <div className="h-[1000px]"></div>
     </div>
   )
 }
