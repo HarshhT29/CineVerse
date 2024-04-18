@@ -1,0 +1,6 @@
+.ratingCircle .CircularProgressbar-text {
+    @apply text-[34px] font-bold fill-[var(--black)];
+}
+.ratingCircle .CircularProgressbar-trail {
+    @apply stroke-transparent;
+}

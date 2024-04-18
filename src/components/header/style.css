@@ -1,6 +1,6 @@
 
 .header .menuItems .itemsEle {
-    @apply flex h-[60px] items-center text-[white] font-medium relative cursor-pointer mx-[15px] my-0;
+    @apply flex h-[60px] items-center text-white font-medium relative cursor-pointer mx-[15px] my-0 hover:text-orange-300;
 }
 .extra {
     @apply flex flex-col absolute top-[60px] left-0 bg-[var(--black)] w-full px-0 py-5 border-t border-white border-opacity-10 animate-[mobileMenuView] duration-300 ease-out;

@@ -1,9 +1,9 @@
 .footer .menuItems .itemsEle {
     transition: all ease 0.3s;
-    @apply cursor-pointer text-xs md:text-[16px]
+    @apply cursor-pointer text-xs md:text-[16px];
 }
 
 .footer .socialIcons .icon {
     transition: all ease 0.3s;
-    @apply w-12 h-12 rounded-[50%] bg-[var(--black)] flex items-center justify-center cursor-pointer
+    @apply w-12 h-12 rounded-[50%] bg-[var(--black)] flex items-center justify-center cursor-pointer;
 }
