@@ -1,0 +1,118 @@
+.detailsBanner .backdropImg .lazy-load-image-background {
+    @apply w-full h-full;
+}
+.detailsBanner .backdropImg .lazy-load-image-background img {
+    @apply w-full h-full object-cover object-center;
+}
+
+.detailsBanner .opacity-layer {
+    @apply w-full h-[250px] absolute bottom-0 left-0;
+    background: linear-gradient(180deg, rgba(4, 21, 45, 0) 0%, #04152d 79.17%);
+}
+
+.detailsBanner .content .leftContent .posterImg {
+    @apply h-full block rounded-xl md:max-w-[350px] object-cover;
+}
+
+.detailsBanner .content .rightContent .genres {
+    margin-bottom: 25px;
+    flex-flow: row wrap;
+}
+.detailsBanner .content .rightContent .playBtn svg {
+    @apply w-[60px] md:w-20;
+}
+.detailsBanner .content .rightContent .playBtn .triangle {
+    stroke-dasharray: 240;
+    stroke-dashoffset: 480;
+    stroke: white;
+    transform: translateY(0);
+    transition: all 0.7s ease-in-out;
+}
+.detailsBanner .content .rightContent .playBtn .circle {
+    stroke: white;
+    stroke-dasharray: 650;
+    stroke-dashoffset: 1300;
+    transition: all 0.5s ease-in-out;
+}
+.detailsBanner .content .rightContent .playBtn .txt {
+    font-size: 20px;
+    transition: all 0.7s ease-in-out;
+}
+
+.detailsBanner .content .rightContent .playBtn:hover .txt {
+    color: var(--pink);
+}
+.detailsBanner .content .rightContent .playBtn:hover .triangle {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    stroke: var(--pink);
+    animation: trailorPlay 0.7s ease-in-out;
+}
+.detailsBanner .content .rightContent .playBtn:hover .circle {
+    stroke-dashoffset: 0;
+    stroke: var(--pink);
+}
+
+
+
+.detailsBanner .content .rightContent .info {
+    @apply border-b border-solid border-white border-opacity-10 py-[14px] px-0 flex;
+}
+.detailsBanner .content .rightContent .info .infoItem {
+    @apply mr-[10px] flex flex-wrap lg:space-x-1;
+}
+.detailsBanner .content .rightContent .info .txt {
+    @apply mr-[10px] opacity-50 leading-[17px];
+}
+.detailsBanner .content .rightContent .info .txt .txt-ex {
+    @apply font-semibold opacity-10;
+}
+
+.dbSkeleton .rightEle .row {
+    @apply w-full h-[25px] mb-5 rounded-[50px];
+}
+
+.dbSkeleton .rightEle .row :nth-child(2) {
+    @apply w-[75%] mb-[50px];
+}
+
+.dbSkeleton .rightEle .row :nth-child(5) {
+    @apply w-[50%] mb-[50px];
+}
+
+/* videoSection CSS */
+.videoSection .videos .videoItem .thumbNail img {
+    @apply w-full block rounded-xl;
+    transition: all 0.7s ease-in-out;
+}
+.videoSection .videos .videoItem .thumbNail svg {
+    @apply absolute top-[50%] left-[50%] w-[50px] h-[50px];
+    transform: translate(-50%, -50%);
+}
+.videoSection .videos .videoItem .thumbNail .triangle {
+    stroke-dasharray: 240;
+    stroke-dashoffset: 480;
+    stroke: white;
+    transform: translateY(0);
+    transition: all 0.7s ease-in-out;
+}
+.videoSection .videos .videoItem .thumbNail .circle {
+    stroke: white;
+    stroke-dasharray: 650;
+    stroke-dashoffset: 1300;
+    transition: all 0.5s ease-in-out;
+}
+
+.videoSection .videos .videoItem .thumbNail:hover img {
+    opacity: 0.5;
+}
+.videoSection .videos .videoItem .thumbNail:hover .triangle {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    stroke: var(--pink);
+    animation: trailorPlay 0.7s ease-in-out;
+}
+.videoSection .videos .videoItem .thumbNail:hover .circle {
+    stroke-dashoffset: 0;
+    stroke: var(--pink);
+}

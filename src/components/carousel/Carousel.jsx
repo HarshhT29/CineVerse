@@ -11,7 +11,7 @@ import RatingCircle from '../ratingCircle/RatingCircle';
 import Genres from '../genres/Genres';
 import "./style.css";
 
-const Carousel = ({data,loading}) => {
+const Carousel = ({data,loading,endpoint,title}) => {
     const carouselContainer = useRef();
     const { url } = useSelector((state) => state.home);
     const navigate = useNavigate();
@@ -26,11 +26,11 @@ const Carousel = ({data,loading}) => {
     }
     const skItem = () => {
         return (
-            <div className="skeletonItem">
-                <div className="posterBlock skeleton">
-                    <div className="textBlock skeleton">
-                        <div className="title skeleton" />
-                        <div className="date skeleton" />
+            <div className="skeletonItem w-[125px] flex-shrink-0 md:w-[calc(25%-15px)] lg:w-[calc(20%-16px)]">
+                <div className="posterBlock rounded-xl w-full aspect-[1/1.5] mb-[30px] skeleton">
+                    <div className="textBlock text-white flex flex-col skeleton">
+                        <div className="title w-full h-5 mb-[10px] skeleton" />
+                        <div className="date w-[75%] h-5 skeleton" />
                     </div>
                 </div>
             </div>
@@ -40,6 +40,13 @@ const Carousel = ({data,loading}) => {
     return (
         <div className="carousel mb-[50px]">
             <ContentWrapper className={"relative"}>
+
+                {title && (
+                    <div className="carTitle text-2xl text-white mb-5 font-normal">
+                        {title}
+                    </div>
+                )}
+
                 <BsFillArrowLeftCircleFill className="carouselLeftNav arrow left-[30px]" onClick={() => navigation("left")} />
                 <BsFillArrowRightCircleFill className="carouselRightNav arrow right-[30px]" onClick={() => navigation("right")} />
 
@@ -49,7 +56,7 @@ const Carousel = ({data,loading}) => {
                             const posterUrl = item.poster_path?url.poster+item.poster_path:PosterFallback;
 
                             return (
-                                <div key = {item.id} className="carouselItem w-[125px] cursor-pointer flex-shrink-0 md:w-[calc(25%-15px)]" onClick={()=>navigate(`/${item.media_type}/${item.id}`)}>
+                                <div key = {item.id} className="carouselItem w-[125px] cursor-pointer flex-shrink-0 md:w-[calc(25%-15px)] lg:w-[calc(20%-16px)]" onClick={()=>navigate(`/${item.media_type || endpoint}/${item.id}`)}>
                                     <div className="posterBlock relative w-full aspect-[1/1.5] bg-cover bg-center mb-[30px] flex items-end justify-between p-[10px]">
                                         <LazyImg src={posterUrl}/>
                                         <RatingCircle rating={item.vote_average.toFixed(1)} className={"w-[40px] h-[40px] relative top-[30px] bg-[color:white] flex-shrink-0 md:w-[50px] md:h-[50px]"}/>
@@ -60,7 +67,7 @@ const Carousel = ({data,loading}) => {
                                             {item.title || item.name}
                                         </span>
                                         <span className="date text-[14px] opacity-50">
-                                            {dayjs(item.release_Date).format("MMM D,YYYY")}
+                                            {dayjs(item.release_date || item.first_air_date).format("MMM D,YYYY")}
                                         </span>
                                     </div>
                                 </div>
@@ -68,7 +75,8 @@ const Carousel = ({data,loading}) => {
                         })}
                     </div>
                 ) : (
-                    <div className="loadingSkeleton">
+                    <div className="loadingSkeleton flex gap-[10px] overflow-y-hidden -mr-5 -ml-5 py-0 px-5 md:gap-5 md:overflow-hidden md:m-0 md:p-0">
+                        {skItem()}
                         {skItem()}
                         {skItem()}
                         {skItem()}
@@ -86,10 +94,5 @@ export default Carousel;
 
 
 {/* <div className="skeletonItem">
-                <div className="posterBlock relative w-full aspect-[1/1.5] bg-cover bg-center mb-[30px] flex items-end justify-between p-[10px] skeleton">
-                    <div className="textBlock text-white flex flex-col skeleton">
-                        <div className="title skeleton" />
-                        <div className="date text-[14px] opacity-50 skeleton" />
-                    </div>
-                </div>
+                
             </div> */}

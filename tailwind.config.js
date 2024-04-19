@@ -14,6 +14,12 @@ export default {
         "blackLight":"var(--black-light)",
         "pinkColor":"var(--pink)",
         "orangeColor":"var(--orange)",
+      },
+      animation: {
+        "videoAnimation": "trailorPlay 0.7s ease-in-out",
+      },
+      objectPosition: {
+        'center-top': 'center top',
       }
     },
   },
