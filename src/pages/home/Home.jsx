@@ -12,7 +12,6 @@ const Home = () => {
       <Trending />
       <Popular />
       <TopRated />
-      {/* <div className="h-[1000px]"></div> */}
     </div>
   )
 }

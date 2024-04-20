@@ -16,7 +16,7 @@ const HeroBanner = () => {
   const {data,loading} = useHarsh("/movie/upcoming");
   
   useEffect(()=>{
-    const bgImage = url.backdrop + data?.results?.[Math.floor(Math.random()*20)]?.backdrop_path;
+    const bgImage = url.backdrop?url.backdrop + data?.results?.[Math.floor(Math.random()*20)]?.backdrop_path:"https://image.tmdb.org/t/p/original/qrGtVFxaD8c7et0jUtaYhyTzzPg.jpg";
     setBg(bgImage);
   }, [data])
 
