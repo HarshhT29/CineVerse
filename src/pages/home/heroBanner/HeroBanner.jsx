@@ -36,7 +36,7 @@ const HeroBanner = () => {
       <ContentWrapper>
         <div className="banner-content flex flex-col items-center text-white text-center relative max-w-[800px] my-0 mx-auto">
           <span className="title text-[50px] font-bold mb-[10px] md:mb-0 md:text-[80px]">Welcome</span>
-          <span className="subtitle text-[18px] font-medium mb-10 md:text-2xl">Millions of movies, TV shows and people to discover. Explore now!</span>
+          <span className="subtitle text-[18px] font-medium mb-10 md:text-2xl">Millions of movies and TV shows to discover. Explore now!</span>
           <div className="searchInput flex items-center w-full">
             <input type="text" placeholder="Search" 
               onChange={inpHandler} value={inp}

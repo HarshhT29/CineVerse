@@ -4,7 +4,7 @@ import { SlMenu } from "react-icons/sl";
 import { VscChromeClose } from "react-icons/vsc";
 import { useNavigate, useLocation } from "react-router-dom";
 import ContentWrapper from '../contentWrapper/ContentWrapper';
-import logo from "../../assets/movix-logo.svg";
+import logo from "../../assets/cineVerseLogo.png";
 import "./style.css"
 
 const Navbar = () => {
@@ -63,7 +63,7 @@ const Navbar = () => {
     <header className={`header fixed w-full h-[60px] flex items-center transition-all duration-300 ease-out z-[2] ${menu ? 'bg-[--black] md:bg-[#00000040]' : ''} ${nav}`}>
       <ContentWrapper className="flex items-center justify-between">
         <div className="logo cursor-pointer" onClick={() => {navigate("/");setMenu(false);setSearch(false);}}>
-          <img src={logo} alt='Sitelogo' className='h-[50px]' />
+          <img src={logo} alt='Sitelogo' className='h-[41.5px] md:h-12' />
         </div>
         <ul className={`menuItems ${menu ? 'extra md:hidden' : 'hidden'} list-none items-center md:flex`}>
           <li className={`itemsEle ${menu ? 'extra1' : ''}`} onClick={() => { navigationHandler("movie") }}>Movies</li>
