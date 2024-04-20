@@ -1,0 +1,7 @@
+/* .movieCard .imgBlock {
+    transition: all ease 0.5s
+} */
+
+.movieCard .imgBlock .lazy-load-image-background {
+    @apply absolute top-0 left-0 w-full rounded-xl overflow-hidden ;
+}

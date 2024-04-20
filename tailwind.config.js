@@ -17,6 +17,8 @@ export default {
       },
       animation: {
         "videoAnimation": "trailorPlay 0.7s ease-in-out",
+        "rotation-animation": "rotate 2s linear infinite",
+        "dash-animation": "dash 1.5s ease-in-out infinite"
       },
       objectPosition: {
         'center-top': 'center top',
