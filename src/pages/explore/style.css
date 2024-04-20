@@ -1,0 +1,33 @@
+.expPage .filters .react-select-container .genresDD {
+    @apply w-full md:max-w-[500px] md:min-w-[250px];
+}
+.expPage .filters .react-select-container .sortbyDD {
+    @apply w-full flex-shrink-0 md:w-[250px];
+}
+.expPage .filters .react-select-container .react-select__control {
+    @apply border-0 outline-0 shadow-none bg-[var(--black-light)] rounded-2xl;
+}
+
+.expPage .filters .react-select-container .react-select__control .react-select__value-container .react-select__placeholder,
+.react-select__input-container {
+    @apply text-white my-0 mx-[10px];
+}
+.expPage .filters .react-select-container .react-select__control .react-select__single-value  {
+    @apply text-white;
+}
+.expPage .filters .react-select-container .react-select__control .react-select__multi-value  {
+    @apply bg-[var(--black3)] rounded-[10px];
+}
+.expPage .filters .react-select-container .react-select__control .react-select__multi-value .react-select__multi-value__label {
+    @apply text-white;
+}
+.expPage .filters .react-select-container .react-select__control .react-select__multi-value .react-select__multi-value__remove {
+    @apply text-white cursor-pointer;
+}
+.expPage .filters .react-select-container .react-select__control .react-select__multi-value .react-select__multi-value__remove:hover {
+    @apply text-[var(--black-lighter)];
+}
+
+.expPage .filters .react-select-container .react-select__menu {
+    @apply top-[40px] m-0 p-0;
+}

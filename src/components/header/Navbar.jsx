@@ -66,7 +66,7 @@ const Navbar = () => {
           <img src={logo} alt='Sitelogo' className='h-[50px]' />
         </div>
         <ul className={`menuItems ${menu ? 'extra md:hidden' : 'hidden'} list-none items-center md:flex`}>
-          <li className={`itemsEle ${menu ? 'extra1' : ''}`} onClick={() => { navigationHandler("movies") }}>Movies</li>
+          <li className={`itemsEle ${menu ? 'extra1' : ''}`} onClick={() => { navigationHandler("movie") }}>Movies</li>
           <li className={`itemsEle ${menu ? 'extra1' : ''}`} onClick={() => { navigationHandler("tv") }}>TV Shows</li>
           <li className="hidden md:flex h-[60px] items-center text-[white] font-medium relative cursor-pointer mx-[15px] my-0"><HiOutlineSearch className='text-white' onClick={openSearch} /></li>
         </ul>
