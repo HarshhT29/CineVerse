@@ -4,7 +4,7 @@ import { SlMenu } from "react-icons/sl";
 import { VscChromeClose } from "react-icons/vsc";
 import { useNavigate, useLocation } from "react-router-dom";
 import ContentWrapper from '../contentWrapper/ContentWrapper';
-import logo from "../../assets/cineVerseLogo.png";
+import logo from "../../assets/cine-verse-logo.png";
 import "./style.css"
 
 const Navbar = () => {
