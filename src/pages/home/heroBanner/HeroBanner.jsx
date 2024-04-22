@@ -41,7 +41,10 @@ const HeroBanner = () => {
             <input type="text" placeholder="Search" 
               onChange={inpHandler} value={inp}
               onKeyUp={inpHandler} className="w-[calc(100%-100px)] h-[50px] bg-white outline-0 border-0 rounded-tl-3xl rounded-bl-3xl rounded-tr-none rounded-br-none py-0 px-4 text-[14px] md:w-[calc(100%-150px)] md:h-[60px] md:text-xl md:px-7 text-black"/>
-            <button className='w-[100px] h-[50px] bg-[image:var(--gradient)] outline-0 border-0 rounded-tr-3xl rounded-br-3xl rounded-tl-none rounded-bl-none text-[16px] cursor-pointer md:w-[150px] md:h-[60px] md:text-[18px]' onClick={() => navigate(`/search/${inp}`)}>Search</button>
+            <button className='w-[100px] h-[50px] bg-[image:var(--gradient)] outline-0 border-0 rounded-tr-3xl rounded-br-3xl rounded-tl-none rounded-bl-none text-[16px] cursor-pointer md:w-[150px] md:h-[60px] md:text-[18px]' onClick={() => {
+              if(inp.length>0)
+                navigate(`/search/${inp}`)
+            } }>Search</button>
           </div>
         </div>
       </ContentWrapper>
