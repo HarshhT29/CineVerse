@@ -143,7 +143,7 @@ const Explore = () => {
               })}
             </InfiniteScroll>
             ):(
-              <span className="resNotFound text-2xl text-[var(--black-light)]">
+              <span className="resNotFound text-2xl text-(--black-light)">
                 No results found for the given query parameters.
               </span>
             )}

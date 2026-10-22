@@ -60,7 +60,7 @@ const Navbar = () => {
   }, [prevScroll]);
 
   return (
-    <header className={`header fixed w-full h-[60px] flex items-center transition-all duration-300 ease-out z-[2] ${menu ? 'bg-[--black] md:bg-[#00000040]' : ''} ${nav}`}>
+    <header className={`header fixed w-full h-[60px] flex items-center transition-all duration-300 ease-out z-2 ${menu ? 'bg-(--black) md:bg-[#00000040]' : ''} ${nav}`}>
       <ContentWrapper className="flex items-center justify-between">
         <div className="logo cursor-pointer" onClick={() => {navigate("/");setMenu(false);setSearch(false);}}>
           <img src={logo} alt='Sitelogo' className='h-[41.5px] md:h-12' />
@@ -82,7 +82,7 @@ const Navbar = () => {
               <input type="text" placeholder="Search"
                 onChange={inpHandler} value={inp}
                 onKeyUp={inpHandler} className="w-full h-[50px] bg-white outline-0 border-0 rounded-tl-3xl rounded-bl-3xl rounded-tr-none rounded-br-none py-0 px-4 text-[14px] md:text-xl md:px-7 text-black" />
-              <VscChromeClose className='text-xl flex-shrink-0 ml-2 cursor-pointer' onClick={() => setSearch(false)} />
+              <VscChromeClose className='text-xl shrink-0 ml-2 cursor-pointer' onClick={() => setSearch(false)} />
             </div>
           </ContentWrapper>
         </div>

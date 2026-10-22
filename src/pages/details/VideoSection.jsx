@@ -12,8 +12,8 @@ const VideoSection = ({ data, loading }) => {
 
     const loadingSkeleton = () => {
         return (
-            <div className="skItem w-[150px] flex-shrink-0 md:w-[25%]">
-                <div className="thumb w-full aspect-[16/9] rounded-xl mb-[10px] skeleton"></div>
+            <div className="skItem w-[150px] shrink-0 md:w-[25%]">
+                <div className="thumb w-full aspect-video rounded-xl mb-[10px] skeleton"></div>
                 <div className="row h-5 w-full rounded-[10px] mb-[10px] skeleton"></div>
                 <div className="row1 h-5 w-[75%] rounded-[10px] skeleton"></div>
             </div>
@@ -27,7 +27,7 @@ const VideoSection = ({ data, loading }) => {
                 {!loading ? (
                     <div className="videos flex gap-[10px] overflow-x-auto -mr-5 -ml-5 py-0 px-5 md:gap-5 md:m-0 md:p-0">
                         {data?.results?.map((vid)=>(
-                            <div key={vid.id} className="videoItem w-[150px] flex-shrink-0 cursor-pointer md:w-[25%]"
+                            <div key={vid.id} className="videoItem w-[150px] shrink-0 cursor-pointer md:w-[25%]"
                             onClick={()=>{
                                 setVideoId(vid.key);
                                 setShow(true);

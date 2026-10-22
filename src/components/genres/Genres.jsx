@@ -8,7 +8,7 @@ const Genres = ({ data,className }) => {
             {data?.map((g) => {
                 if (!genres[g]?.name) return;
                 return (
-                    <div key={g} className="genre bg-[var(--pink)] px-[5px] py-[3px] text-[12px]
+                    <div key={g} className="genre bg-(--pink) px-[5px] py-[3px] text-[12px]
                     text-white whitespace-nowrap">
                         {genres[g]?.name}
                     </div>

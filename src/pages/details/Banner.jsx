@@ -33,7 +33,7 @@ const Banner = ({ video, crew }) => {
         return `${hours} h ${min > 0 ? `${min} m` : ""}`;
     };
     return (
-        <div className="detailsBanner w-full bg-[var(--black)] pt-[100px] mb-[50px] md:mb-0 md:pt-[120px] md:min-h-[700px]">
+        <div className="detailsBanner w-full bg-(--black) pt-[100px] mb-[50px] md:mb-0 md:pt-[120px] md:min-h-[700px]">
             {!loading ? (
                 <>
                     {!!data && (
@@ -44,7 +44,7 @@ const Banner = ({ video, crew }) => {
                             <div className="opacityLayer"></div>
                             <ContentWrapper>
                                 <div className="content flex relative flex-col gap-[25px] md:gap-[50px] md:flex-row">
-                                    <div className="leftContent flex-shrink-0">
+                                    <div className="leftContent shrink-0">
                                         {data.poster_path ?
                                             (<LazyImg
                                                 className="posterImg"
@@ -176,7 +176,7 @@ const Banner = ({ video, crew }) => {
             ) : (
                 <div className="dbSkeleton flex relative flex-col gap-[25px] md:gap-[50px] md:flex-row">
                     <ContentWrapper className={"flex gap-[50px]"}>
-                        <div className="leftEle flex-shrink-0 w-full block rounded-xl aspect-[1/1.5] md:max-w-[350px] skeleton"></div>
+                        <div className="leftEle shrink-0 w-full block rounded-xl aspect-[1/1.5] md:max-w-[350px] skeleton"></div>
                         <div className="rightEle w-full ">
                             <div className="row skeleton"></div>
                             <div className="row skeleton"></div>

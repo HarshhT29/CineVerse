@@ -1,3 +1,4 @@
+@reference "../../index.css";
 .switchingTabs .tabItems .tabItem {
     @apply h-full flex items-center justify-center w-[100px] text-[var(--black)] text-[14px] relative z-[1] cursor-pointer;
     transition: color ease 0.3s;

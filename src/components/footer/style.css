@@ -1,3 +1,4 @@
+@reference "../../index.css";
 .footer .menuItems .itemsEle {
     transition: all ease 0.3s;
     @apply cursor-pointer text-xs md:text-[16px];
