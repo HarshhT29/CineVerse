@@ -26,7 +26,7 @@ const HeroBanner = () => {
     setInp(e.target.value);
   };
   return (
-    <div className="hero-banner w-full h-[450px] bg-[color:var(--black)] flex items-center relative md:h-[700px]">
+    <div className="hero-banner w-full h-[450px] bg-(--black) flex items-center relative md:h-[700px]">
       {!loading && <div className="backdropImg w-full h-full absolute top-0 left-0 opacity-50 overflow-hidden">
         <LazyImg src={bg.toString()} alt="" height={'100%'} width={'100%'} />
       </div>}
@@ -41,7 +41,7 @@ const HeroBanner = () => {
             <input type="text" placeholder="Search" 
               onChange={inpHandler} value={inp}
               onKeyUp={inpHandler} className="w-[calc(100%-100px)] h-[50px] bg-white outline-0 border-0 rounded-tl-3xl rounded-bl-3xl rounded-tr-none rounded-br-none py-0 px-4 text-[14px] md:w-[calc(100%-150px)] md:h-[60px] md:text-xl md:px-7 text-black"/>
-            <button className='w-[100px] h-[50px] bg-[image:var(--gradient)] outline-0 border-0 rounded-tr-3xl rounded-br-3xl rounded-tl-none rounded-bl-none text-[16px] cursor-pointer md:w-[150px] md:h-[60px] md:text-[18px]' onClick={() => {
+            <button className='w-[100px] h-[50px] bg-(image:--gradient) outline-0 border-0 rounded-tr-3xl rounded-br-3xl rounded-tl-none rounded-bl-none text-[16px] cursor-pointer md:w-[150px] md:h-[60px] md:text-[18px]' onClick={() => {
               if(inp.length>0)
                 navigate(`/search/${inp}`)
             } }>Search</button>

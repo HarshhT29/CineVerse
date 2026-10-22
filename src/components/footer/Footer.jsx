@@ -5,7 +5,7 @@ import "./style.css"
 
 const Footer = () => {
   return (
-    <footer className="footer bg-[var(--black3)] py-12 px-0 text-white relative">
+    <footer className="footer bg-(--black3) py-12 px-0 text-white relative">
       <ContentWrapper className={"flex items-center flex-col"}>
         <ul className="menuItems list-none flex items-center justify-center gap-4 mb-5 md:mb-7 md:gap-7">
           <li className="itemsEle">Terms Of Use</li>

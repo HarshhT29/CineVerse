@@ -74,7 +74,7 @@ const SearchResult = () => {
 
             </>
           ) : (
-            <span className="resNotFound text-2xl text-[color:var(--black-light)]">
+            <span className="resNotFound text-2xl text-(--black-light)">
               No results found for '{query}'
             </span>
           )}
